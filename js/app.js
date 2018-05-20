@@ -85,6 +85,7 @@ for (var i = 0; i < cards.length; i++) {
     clicks = 1;
     this.classList.add('open');
     this.classList.add('show');
+    this.classList.add('bounceIn');
     this.style.pointerEvents = 'none';
     openedCards.push(this.children[0]);
     cardMatch();
@@ -103,7 +104,8 @@ function cardMatch() {
       //If the match if found, changes color, and shows the cards on the screen
       for (var i = 0; i < iCard.length; i++) {
         if (openedCards[0].className == iCard[i].className) {
-          iCard[i].parentNode.classList.add('match');
+          iCard[i].parentNode.classList.add('match', 'flipInY');
+          iCard[i].parentNode.classList.remove('bounceIn');
           iCard[i].parentNode.style.pointerEvents = 'none'; //Stop from being clicked
           resultText.textContent = "CORRECT";
           resultText.classList.remove('incorrect');
@@ -115,17 +117,18 @@ function cardMatch() {
       //Run winner function to check if user is the winner yet?
       winner();
       //If the cards do not match add text incorrect and flip them back
-    } else if (openedCards[0].className != openedCards[1].className) {
+    } else {
       for (let i = 0; i < iCard.length; i++) {
         resultText.textContent = "INCORRECT";
         resultText.classList.add('incorrect');
         setTimeout(function() {
           iCard[i].parentNode.classList.remove('show');
           iCard[i].parentNode.classList.remove('open');
+          iCard[i].parentNode.classList.remove('bounceIn');
         }, 300);
         iCard[i].parentNode.style.pointerEvents = 'auto'; //Release the click function
-        openedCards = [];
       }
+      openedCards = [];
     }
   }
 }
@@ -136,9 +139,9 @@ function winner() {
     stopTimer();
     setTimeout(function() {
       document.querySelector('.modal').style.display = "inline";
-      document.querySelector('.displayMoves').textContent = "Total Moves: " + Math.floor(totalMoves / 2);
-      document.querySelector('.displayTime').textContent = "Time Taken: " + timer.minutes + " minutes and " + timer.seconds + " seconds";
-      document.querySelector('.displayStars').textContent = "Stars Collected: " + totalStars;
+      document.querySelector('.displayMoves').textContent = `Total Moves: ${Math.floor(totalMoves / 2)}`;
+      document.querySelector('.displayTime').textContent = `Time Taken:  ${timer.minutes} minutes and ${timer.seconds} seconds`;
+      document.querySelector('.displayStars').textContent = `Stars Collected: ${totalStars}`;
     }, 400);
     clearInterval(startTimer); //Stops timer after the winner is found
   }
@@ -149,7 +152,6 @@ function generateCards() {
   var iCard = document.querySelectorAll('.card i.fa');
   shuffle(symbols);
   for (var i = 0; i < iCard.length; i++) {
-    console.log(iCard[i]);
     iCard[i].setAttribute('class', 'fa ' + symbols[i]);
   }
 }
