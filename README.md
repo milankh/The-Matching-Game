@@ -1,20 +1,17 @@
 # Memory Game Project
 
-## Table of Contents
+## How to play the Game
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* The main goal is find the pair for all the cards present in the deck
+* The cards will be randomnly shuffled
+* CLick on one card, then it will reveal its symbol, Now, Player is to find the same exact symbol in the deck to match
+* If the consecutive clicks match the symbol, the both cards will stay shown, and hide otherwise
+* The 8 pair match is needed to win the game
+* Player will be popped with a message if player wins game which shows your time, moves, stars, and also lets player replay
+* Right above the deck, player can check total moves, time taken, and how many stars player has collected so far
+* Stars are calculated based on how many moves the player has made
 
-## Instructions
+## Screenshots
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+## Dependencies
+This project makes use of google font library
