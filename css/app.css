@@ -132,10 +132,11 @@ h1 {
   color: #ffa100;
 }
 
+
 /*
 *Styles for modal
+Some Modal styles referenced from w3school.com
 */
-
 
 .modal {
   display: none;/* Hidden by default */

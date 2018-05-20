@@ -15,7 +15,7 @@ let timer = {
 
 generateCards();
 
-// Get the modal
+// Get the modal, Referenced from w3school.com
 var modal = document.getElementById('myModal');
 let resultText = document.querySelector('.result-text');
 var closeModal = document.getElementsByClassName("close")[0]; // Get the <span> element that closes the modal
