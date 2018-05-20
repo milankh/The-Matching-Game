@@ -12,6 +12,8 @@
 * Stars are calculated based on how many moves the player has made
 
 ## Screenshots
+![ss1](https://user-images.githubusercontent.com/25235017/40284732-892ee1e6-5c61-11e8-9aaf-3c1c5ca7c43f.PNG)
+![ss2](https://user-images.githubusercontent.com/25235017/40284749-a7b8ee7c-5c61-11e8-8a6c-564e88d03557.PNG)
 
 ## Dependencies
 This project makes use of google font library
