@@ -242,3 +242,73 @@ button:hover {
   border-radius: 20px;
   cursor: pointer;
 }
+
+/* Media Queries for small devices */
+@media only screen and (max-width: 750px) {
+  .deck {
+    max-width: 300px;
+    min-height: auto;
+    padding-bottom: 17px;
+  }
+  .deck .card {
+    height: 51px;
+    width: 51px;
+    margin-bottom: 16px;
+  }
+  .score-panel {
+    max-width: 80%;
+    padding-bottom: 0;
+    display: block;
+    text-align: center;
+    line-height: 2em;
+  }
+  .result-text {
+    font-size: 12px;
+    margin-left: 2%;
+  }
+  .modal {
+    padding-top: 50px;
+    height: auto;
+    width: 500px;
+  }
+  .modal-content {
+    width: 100%;
+    margin: 0;
+  }
+  .modal-body {
+    width: 77%;
+  }
+  img {
+    margin-left: 35%;
+  }
+  button {
+    margin-left: 25%;
+  }
+  h2 {
+    margin-left: -25%;
+  }
+  .close {
+    float: none;
+  }
+
+  @-webkit-keyframes animatetop {
+    from {
+      top: 50px;
+      opacity: 0
+    }
+    to {
+      top: 0;
+      opacity: 1
+    }
+  }
+  @keyframes animatetop {
+    from {
+      top: 400px;
+      opacity: 0
+    }
+    to {
+      top: 0px;
+      opacity: 1
+    }
+  }
+}
